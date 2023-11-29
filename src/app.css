@@ -8,9 +8,9 @@ body {
   margin: 0;
   background: linear-gradient(
     90deg,
-    rgba(159, 152, 252, 1) 0%,
+    rgb(215, 225, 255) 0%,
     rgba(164, 201, 249, 1) 57%,
-    rgba(159, 152, 252, 1) 100%
+    rgb(134, 126, 252) 100%
   );
 }
 
@@ -52,10 +52,10 @@ body {
 
 #operator:hover,
 #operator:focus {
-  background-color: rgba(255, 179, 80, 0.75);
+  background-color: rgba(177, 100, 0, 0.75);
 }
 #clear-buttons {
-  background-color: rgba(161, 161, 161, 0.75);
+  background-color: rgba(202, 201, 201, 0.75);
 }
 
 #clear-buttons:hover,
@@ -68,6 +68,7 @@ body {
 }
 
 .output {
+  font-family: monospace;
   grid-column: 1 / -1;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
@@ -87,7 +88,7 @@ body {
 
 .output .current-operand {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .bottom-left {
