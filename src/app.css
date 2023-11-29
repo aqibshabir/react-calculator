@@ -4,6 +4,7 @@
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background: linear-gradient(
     90deg,
@@ -13,10 +14,20 @@ body {
   );
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.calculator-container {
+  max-width: 384px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.61);
+}
+
 .calculator-grid {
   display: grid;
-  margin-top: 10rem;
-  justify-content: center;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
@@ -31,7 +42,25 @@ body {
 
 .calculator-grid > button:hover,
 .calculator-grid > button:focus {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+#operator {
+  background-color: rgba(255, 145, 0, 0.75);
+}
+
+#operator:hover,
+#operator:focus {
+  background-color: rgba(255, 179, 80, 0.75);
+}
+#clear-buttons {
+  background-color: rgba(161, 161, 161, 0.75);
+}
+
+#clear-buttons:hover,
+#clear-buttons:focus {
+  background-color: rgba(88, 88, 88, 0.75);
 }
 
 .span-two {
@@ -45,9 +74,10 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
-  padding: 0.75rem;
+  padding: 1rem;
   word-wrap: break-word;
   word-break: break-all;
+  border-radius: 40px 40px 0 0;
 }
 
 .output .previous-operand {
@@ -58,4 +88,11 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+.bottom-left {
+  border-radius: 0 0 0 40px;
+}
+.bottom-right {
+  border-radius: 0 0 40px 0;
 }
